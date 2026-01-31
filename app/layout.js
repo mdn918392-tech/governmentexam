@@ -2,8 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
-import Footer from "../Components/Navbar";
-import Footer from '../components/Footer'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Government Exam – Latest Govt Jobs, Results, Admit Cards 2025",
   description:
-    "GovernmentExam.online – Get the latest government job alerts, exam notifications, results, admit cards, and syllabus updates for SSC, UPSC, Banking, Railway, Defence, and more",
+    "GovernmentExam.online – Get the latest government job alerts, exam notifications, results, admit cards, and syllabus updates.",
   keywords: [
     "Government Result",
     "Govt Jobs 2025",
@@ -32,32 +32,8 @@ export const metadata = {
     "Admit Cards",
     "Answer Keys",
     "Syllabus",
-    "Admission"
+    "Admission",
   ],
-  openGraph: {
-    title: "Government Exam - Govt Jobs & Exam Updates 2025",
-    description:
-      "Check latest government job notifications, exam results, admit cards, and syllabus updates at Sarkari Result Point.",
-    url: "https://governmentexam.online/",
-    siteName: "Sarkari Result Point",
-    images: [
-      {
-        url: "https://governmentexam.online/seo-banner.png",
-        width: 1200,
-        height: 630,
-        alt: "Government Exam - Latest Government Jobs & Exam Notifications",
-      },
-    ],
-    type: "website",
-    locale: "en_IN",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Government Results Hub - Latest Govt Jobs 2025",
-    description:
-      "Stay updated with Government Results Hub for latest government job openings, exam results, and admit cards.",
-    images: ["https://governmentexam.online/seo-banner.png"],
-  },
   alternates: {
     canonical: "https://governmentexam.online/",
   },
@@ -70,24 +46,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* ✅ Google AdSense */}
+        {/* Google AdSense */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8438144860540330"
           crossOrigin="anonymous"
         />
-        
-        {/* ✅ Important meta tags */}
+
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
-        
       </head>
-      
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* ✅ Google Analytics (GA4) */}
+
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* Google Analytics */}
         <Script
-          async
           src="https://www.googletagmanager.com/gtag/js?id=G-MRWG0TTSTS"
           strategy="afterInteractive"
         />
@@ -99,7 +74,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-MRWG0TTSTS');
           `}
         </Script>
-        
+
         <Navbar />
         <main>{children}</main>
         <Footer />
