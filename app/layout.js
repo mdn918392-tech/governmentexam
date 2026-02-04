@@ -38,7 +38,7 @@ export const metadata = {
     canonical: "https://governmentexam.online/",
   },
   verification: {
-    google: "vlEyRhKOjJU2SEX-s3eki6i4pTvgirVZDLAa3RNPpwg",
+    google: "-QD64h0qJ-7kW15LvtnCiozoc0zHyIYuybZ8YLBaB_g",
   },
 };
 
