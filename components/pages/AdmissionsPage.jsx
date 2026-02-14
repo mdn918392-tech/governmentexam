@@ -6,8 +6,8 @@ export const runtime = "nodejs";
 
 async function getAdmissionData() {
     try {
-        const res = await fetch('https://gist.githubusercontent.com/shahidafridi-collab/2203569eeb7046f824f7eddb7613d065/raw/gistfile1.txt', {
-            next: { revalidate: 3600 }
+        const res = await fetch('https://gist.githubusercontent.com/mdnematullah1020-beep/abf2d9639cef9363f05d9b273e2f999e/raw/gistfile1.txt', {
+            next: { revalidate: 100 }
         });
         if (!res.ok) throw new Error('Failed to fetch data');
         return await res.json();

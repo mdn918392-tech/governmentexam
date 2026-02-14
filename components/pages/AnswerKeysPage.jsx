@@ -6,8 +6,8 @@ export const runtime = "nodejs";
 
 async function getAnswerKeys() {
     try {
-        const res = await fetch('https://gist.githubusercontent.com/shahidafridi-collab/3d4fa23aadd9be02be79a58e46009126/raw/gistfile1.txt', {
-            next: { revalidate: 3600 }
+        const res = await fetch('https://gist.githubusercontent.com/mdnematullah1020-beep/970b1c62ef93ba069446af10ca2ab081/raw/gistfile1.txt', {
+            next: { revalidate: 300 }
         });
         if (!res.ok) throw new Error('Failed to load');
         return await res.json();

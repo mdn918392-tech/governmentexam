@@ -6,8 +6,8 @@ export const runtime = "nodejs";
 
 async function getAdmitCardData() {
     try {
-        const res = await fetch('https://gist.githubusercontent.com/shahidafridi-collab/d6610e1b9fb8e2617c2999d1edc0851c/raw/gistfile1.txt', {
-            next: { revalidate: 3600 }
+        const res = await fetch('https://gist.githubusercontent.com/mdnematullah1020-beep/db88ebd7193ef3235919bdc6b3071c5d/raw/gistfile1.txt', {
+            next: { revalidate: 300 }
         });
         if (!res.ok) throw new Error('Failed to load');
         return await res.json();

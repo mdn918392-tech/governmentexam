@@ -58,7 +58,7 @@ export const metadata = {
 };
 
 async function getHomeData(): Promise<HomeData> {
-  const res = await fetch('https://gist.githubusercontent.com/shahidafridi-collab/13807508220c46402eb6dcc6629e1b86/raw/homePage', { 
+  const res = await fetch('https://gist.githubusercontent.com/mdnematullah1020-beep/6ee4670b86915773e292d0a2cc23a545/raw/gistfile1.txt', { 
     cache: "no-cache" 
   });
 

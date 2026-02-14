@@ -6,8 +6,8 @@ export const runtime = "nodejs";
 
 async function getResultData() {
     try {
-        const res = await fetch('https://gist.githubusercontent.com/shahidafridi-collab/9fb5f95e93ed95eba1959d1a18ac6bf7/raw/combine_result', {
-            next: { revalidate: 3600 }
+        const res = await fetch('https://gist.githubusercontent.com/mdnematullah1020-beep/930e0cb90879dcc836e7b2988a43d074/raw/gistfile1.txt', {
+            next: { revalidate: 300 }
         });
         if (!res.ok) throw new Error('Failed to load');
         return await res.json();

@@ -8,7 +8,7 @@ async function getSyllabusData() {
     try {
         const res = await fetch(
             "https://gist.githubusercontent.com/shahidafridi-collab/c687d6e00dcc0a79bd689a520de733c6/raw/syllabus",
-            { next: { revalidate: 3600 } } // Standard caching
+            { next: { revalidate: 300 } } // Standard caching
         );
 
         if (!res.ok) throw new Error("Failed to load syllabus data");
