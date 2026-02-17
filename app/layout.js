@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import Script from "next/script";
+import "./globals.css";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -42,29 +42,21 @@ export const metadata = {
   },
 };
 
-
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Google AdSense */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8438144860540330"
-          crossOrigin="anonymous"
-        />
-
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-      </head>
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Google Analytics */}
+        {/* ✅ Google AdSense */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8438144860540330"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
+        {/* ✅ Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-MRWG0TTSTS"
           strategy="afterInteractive"
